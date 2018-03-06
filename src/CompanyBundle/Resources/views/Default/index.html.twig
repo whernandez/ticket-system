@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <div class="container">
+
+        <form method="POST">
+            {{ form_row((form._token)) }}
+
+            <div class="row">
+                <div class="col-sm-6">
+                    {{ form_label(form.name) }}
+                    {{ form_widget(form.name) }}
+                </div>
+            </div>
+
+            <br>
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <input type="submit"
+                           value="create"
+                           class="btn btn-primary pull-left">
+                </div>
+            </div>
+        </form>
+
+        <br>
+
+        <div class="row">
+            <div class="col-sm-6">
+                {# Include Companies #}
+                {% include '@Company/list_all.html.twig'
+                    with {
+                        'companies': companies
+                    } only
+                %}
+            </div>
+        </div>
+
+    </div>
+{% endblock %}
+
+
+
