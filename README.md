@@ -1,3 +1,5 @@
+My first practices with git and github
+
 Symfony Standard Edition
 ========================
 
