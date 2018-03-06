@@ -299,28 +299,5 @@ class User implements AdvancedUserInterface, \Serializable
     {
         return $this->isActive;
     }
-
-    /**
-     * Set company
-     *
-     * @param \CompanyBundle\Entity\Company $company
-     *
-     * @return User
-     */
-    public function setCompany(\CompanyBundle\Entity\Company $company = null)
-    {
-        $this->company = $company;
-
-        return $this;
-    }
-
-    /**
-     * Get company
-     *
-     * @return \CompanyBundle\Entity\Company
-     */
-    public function getCompany()
-    {
-        return $this->company;
-    }
 }
+

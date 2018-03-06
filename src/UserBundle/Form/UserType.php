@@ -2,6 +2,8 @@
 
 namespace UserBundle\Form;
 
+use CompanyBundle\Entity\Company;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -9,6 +11,7 @@ use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\RepeatedType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
+use Symfony\Component\Validator\Constraints\Choice;
 
 class UserType extends AbstractType
 {
@@ -52,6 +55,15 @@ class UserType extends AbstractType
                             'placeholder' => 'Same Password'
                         )),
             ))
+            ->add('company', EntityType::class,
+                array(
+                    'class' => Company::class,
+                    'label' => 'Company:',
+                    'attr' => array(
+                        'class' => 'form-control'
+                    )
+                )
+            )
         ;
 
     }

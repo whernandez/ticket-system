@@ -64,7 +64,7 @@ class DefaultController extends Controller
             'UserBundle:Default:register.html.twig',
             array(
                     'form'                  => $form->createView(),
-                    'page_header_title'     => 'Users Registration',
+                    'page_header_title'     => 'Administrator Panel',
                     'page_header_subtitle'  => 'Create User'
                 )
         );
