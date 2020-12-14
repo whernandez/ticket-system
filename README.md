@@ -1,4 +1,4 @@
-My first practices with git and github
+PHP Symfony Test Project
 
 Symfony Standard Edition
 ========================
